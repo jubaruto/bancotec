@@ -2,9 +2,9 @@ from datetime import date
 from utils.helper import date_para_str, str_para_date
 
 class Cliente:
-    contador: int = 100
+    contador: int = 1001
     
-    def __init__(self:object, nome: str, email: str, cpf: str, data_nasc: str) -> None:
+    def __init__(self: object, nome: str, email: str, cpf: str, data_nasc: str) -> None:
         self.__codigo: int = Cliente.contador
         self.__nome: str = nome
         self.__email: str = email
@@ -13,30 +13,30 @@ class Cliente:
         self.__data_cadastro: date = date.today()
         Cliente.contador += 1
 
-@property
-def codigo(self: object) -> int:
-    return self.__codigo
+    @property
+    def codigo(self: object) -> int:
+        return self.__codigo
 
-@property
-def nome(self: object) -> str:
-    return self.__nome
+    @property
+    def nome(self: object) -> str:
+        return self.__nome
 
-@property
-def email(self: object) -> str:
-    return self.__email
+    @property
+    def email(self: object) -> str:
+        return self.__email
 
-@property
-def cpf(self: object) -> str:
-    return self.__cpf
+    @property
+    def cpf(self: object) -> str:
+        return self.__cpf
 
-@property
-def data_nasc(self: object) -> str:
-    return date_para_str(self.__data_nasc) 
+    @property
+    def data_nasc(self: object) -> str:
+        return date_para_str(self.__data_nasc)
 
-@property
-def data_cadastro(self: object) -> str:
-    return date_para_str(self.__data_cadastro)
+    @property
+    def data_cadastro(self: object) -> str:
+        return date_para_str(self.__data_cadastro)
 
-def __str__(self: object) -> str:
-    return f'Código: {self.codigo} \nNome: {self.nome} \nData de Nascimento: {self.data_nasc} ' \
-           f'\nCadastro: {self.data_cadastro}'
+    def __str__(self: object) -> str:
+        return f'Código: {self.codigo} \nNome: {self.nome} \nData de Nascimento: {self.data_nasc} ' \
+               f'\nCadastro: {self.data_cadastro}'
